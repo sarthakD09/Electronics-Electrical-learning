@@ -63,6 +63,7 @@ button:hover {
 
 /* Components and Circuits Pages */
 .component-card, .circuit-card {
+    display: inline-block;
     background-color: white;
     padding: 20px;
     border-radius: 8px;
