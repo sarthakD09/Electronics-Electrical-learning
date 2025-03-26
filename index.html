@@ -3,31 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Electronics Learning App</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Electronics Learning Platform</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Header -->
     <header>
-        <h1>Welcome to the Electronics Learning App</h1>
         <nav>
+            <div class="logo">
+                <h1>ElectroLearn</h1>
+            </div>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="components.html">Components</a></li>
-                <li><a href="circuits.html">Circuits</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#components">Components</a></li>
+                <li><a href="#simulations">Simulations</a></li>
+                <li><a href="#quizzes">Quizzes</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="intro">
-        <h2>Learn Electronics Step by Step</h2>
-        <p>Explore circuits, components, and experiments with interactive guides.</p>
-        <button onclick="window.location.href='components.html'">Start Learning</button>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Master Electronics with ElectroLearn</h1>
+            <p>Learn core concepts of electronics through interactive lessons, simulations, and hands-on projects.</p>
+            <a href="#features" class="cta-btn">Get Started</a>
+        </div>
     </section>
 
-    <footer>
-        <p>&copy; 2025 Electronics Learning App</p>
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <h2>Platform Features</h2>
+        <div class="feature-cards">
+            <div class="card">
+                <h3>Interactive Lessons</h3>
+                <p>Engaging lessons on circuit theory, components, and devices with real-life examples.</p>
+            </div>
+            <div class="card">
+                <h3>Circuit Simulations</h3>
+                <p>Design and simulate circuits in real-time with built-in tools and instant feedback.</p>
+            </div>
+            <div class="card">
+                <h3>Component Library</h3>
+                <p>Access detailed information on electronic components including pin diagrams and specs.</p>
+            </div>
+            <div class="card">
+                <h3>Quizzes & Certifications</h3>
+                <p>Take quizzes to test your knowledge and earn certifications upon completion.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Components Section -->
+    <section id="components" class="components">
+        <h2>Explore Components</h2>
+        <p>Learn about essential electronic components like resistors, capacitors, transistors, and more.</p>
+        <div class="component-list">
+            <div class="component-card">
+                <h4>Resistor</h4>
+                <p>The resistor limits the current flow in a circuit and is a key component in almost every circuit.</p>
+                <button class="view-details">View Details</button>
+            </div>
+            <div class="component-card">
+                <h4>Capacitor</h4>
+                <p>Capacitors store electrical energy and are used in filtering, timing, and signal processing.</p>
+                <button class="view-details">View Details</button>
+            </div>
+            <!-- Add more components as needed -->
+        </div>
+    </section>
+
+    <!-- Simulations Section -->
+    <section id="simulations" class="simulations">
+        <h2>Circuit Simulations</h2>
+        <p>Design and simulate your own circuits with our powerful, user-friendly tools.</p>
+        <button class="cta-btn">Start Simulating</button>
+    </section>
+
+    <!-- Quizzes Section -->
+    <section id="quizzes" class="quizzes">
+        <h2>Take Quizzes</h2>
+        <p>Test your knowledge with quizzes that cover key concepts in electronics. Track your progress and earn certificates.</p>
+        <button class="cta-btn">Start Quiz</button>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-content">
+            <p>© 2025 ElectroLearn - All Rights Reserved</p>
+            <p>Contact: info@electrolearn.com</p>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+            </div>
+        </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
