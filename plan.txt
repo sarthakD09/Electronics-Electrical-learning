@@ -1,0 +1,6 @@
+electronics-learning-app/
+├── index.html          # Home page
+├── components.html     # Electronics components page
+├── circuits.html       # Circuits library page
+├── style.css           # Styles for the app
+└── script.js           # JavaScript for interactive functionality
