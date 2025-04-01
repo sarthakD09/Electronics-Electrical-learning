@@ -9,117 +9,63 @@
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
+    font-size: 16px; /* Default font size */
 }
-.menu-icon {
-    float:right;
-
-}
-
-
 
 /* Header */
-header {
-    background: #333;
-    color: white;
-    padding: 1rem 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Ensures space between logo and menu */
-    padding: 0 20px;
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-}
-
-.menu-icon {
-    margin-left: auto; /* Pushes the menu icon to the extreme right */
-    cursor: pointer;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-}
-
-nav ul li {
-    margin-left: 20px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: white;
+.navbar-brand{
+    font-size: 1.5rem;
     font-weight: bold;
-    transition: color 0.3s;
+    padding: 10px;
 }
-
-nav ul li a:hover {
-    color: #f39c12;
-}
-
 /* Hero Section */
 .hero {
     background: url('hero-image.jpg') no-repeat center center/cover;
-    color: black;
+    color: rgb(0, 0, 0);
     text-align: center;
     padding: 100px 40px;
-    padding-bottom: 10px;
-
 }
 
 .hero-content h1 {
     font-size: 3rem;
     margin-bottom: 20px;
 }
-.hero-content p{
-    padding-bottom: 40px;
+.hero-content p {
+    padding-bottom: 3%;
 }
+
 .cta-btn {
     background-color: #f39c12;
     color: white;
-    padding: 5px 20px;
+    padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
     font-size: 1.5rem;
     transition: background-color 0.3s;
-    
 }
 
 .cta-btn:hover {
     background-color: #e67e22;
 }
 
-/* Features Section */
+/* Feature Cards */
 .features {
     padding: 60px 20px;
     text-align: center;
 }
 
-.features h2 {
-    margin-bottom: 40px;
-    font-size: 2.5rem;
-}
-
 .feature-cards {
     display: flex;
-    justify-content: space-around;
+    gap: 20px;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .card {
     background: #f4f4f4;
     padding: 20px;
-    margin: 10px;
-    border-radius: 10px;
     width: 250px;
+    border-radius: 10px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -130,74 +76,59 @@ nav ul li a:hover {
 
 .card p {
     font-size: 1rem;
-    color: #333;
 }
 
-/* Components Section */
+/* Component Section */
 .components {
     background-color: #ecf0f1;
     padding: 60px 20px;
     text-align: center;
 }
 
-.components .component-list {
+.component-list {
     display: flex;
-    justify-content: center;
+    gap: 20px;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .component-card {
     background: white;
     padding: 20px;
-    margin: 10px;
-    border-radius: 10px;
     width: 250px;
+    border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.component-card h4 {
-    margin-bottom: 15px;
-}
-.component-card p{
-    padding-bottom: 5px;
 }
 
 .view-details {
     background: #f39c12;
-    border: none;
     color: white;
     padding: 10px 20px;
-    cursor: pointer;
+    border: none;
     border-radius: 5px;
-    transition: background-color 0.3s;
+    cursor: pointer;
     font-size: medium;
+    transition: background-color 0.3s;
 }
 
 .view-details:hover {
     background-color: #e67e22;
 }
-#simulations {
+
+/* Simulations and Quizzes Section */
+#simulations, #quizzes {
     text-align: center;
     border: 5px solid #f39c12;
     border-radius: 5px;
     margin-bottom: 50px;
-}
-#simulations p{
-    padding-bottom: 5px;
-}
-#simulations .cta-btn {
-    font-size: medium;
+    padding: 20px;
 }
 
-#quizzes {
-    text-align: center;
-    border: 5px solid #f39c12;
-    border-radius: 5px;
-}
-#quizzes p{
+#simulations p, #quizzes p {
     padding-bottom: 5px;
 }
-#quizzes .cta-btn {
+
+#simulations .cta-btn, #quizzes .cta-btn {
     font-size: medium;
 }
 
@@ -224,39 +155,59 @@ footer .social-links a:hover {
     color: #f39c12;
 }
 
-@media screen and (max-width: 425px) {
-    body{
-        font-size: 14px;
-
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 14px; /* Reduce font size for mobile */
     }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .cta-btn {
+        font-size: 1.2rem;
+    }
+
+    nav ul {
+        display: none; /* Hide navigation on mobile */
+    }
+
     nav .menu-icon {
-        display: block;
-        cursor: pointer;
-        
-
-        
-    }
-    section {
-        width: min-content;
-    }
-    #quizzes {
-        width: 100%;
-    }
-    #simulations {
-        width: 100%;
+        display: block; /* Show the menu icon on mobile */
     }
 
-    nav .nav-links {
-        display: none;
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        background-color: #333;
         position: absolute;
         top: 60px;
-        right: 20px;
-        background-color: #333;
+        right: 0;
         width: 100%;
+        padding: 20px;
         text-align: center;
     }
 
-    nav .nav-links li {
+    .nav-links li {
         margin: 10px 0;
+    }
+
+    .nav-links.active {
+        display: block;
+    }
+
+    .component-list, .feature-cards {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .component-card, .card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    #simulations, #quizzes {
+        width: 100%;
     }
 }
